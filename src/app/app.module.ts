@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarmodelsComponent } from './carmodels/carmodels.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarcardsComponent } from './carcards/carcards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    CarmodelsComponent
+    CarmodelsComponent,
+    CarcardsComponent
   ],
   imports: [
     BrowserModule,
