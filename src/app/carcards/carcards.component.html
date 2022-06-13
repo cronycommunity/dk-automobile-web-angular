@@ -5,7 +5,7 @@
                 <div class="carousel-inner">
                     <div *ngFor="let photo of data.vehiclePhotoLinks; let j = index" [ngClass]="photo === data.vehiclePhotoLinks[0] ? 'carousel-item active' : 'carousel-item'">
                         <img class="d-block w-100" *ngIf="data.vehiclePhotoLinks[0]" src="{{data.vehiclePhotoLinks[j]}}" alt="dk-automobile">
-                        <img class="d-block w-100" *ngIf="!data.vehiclePhotoLinks[0]" src="/carfoto.jpeg" alt="dk-automobile">
+                        <img class="d-block w-100" *ngIf="!data.vehiclePhotoLinks[0]" src="assets/nophoto.jpeg" alt="dk-automobile">
 
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls{{i}}" role="button" data-slide="prev">
