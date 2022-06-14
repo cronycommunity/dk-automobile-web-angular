@@ -1,0 +1,27 @@
+<div class="row mb-2" *ngFor="let data of constData;let i = index;">
+    <div class="col-sm-6">
+        <div class="info-card">
+            <div id="carouselExampleControls{{i}}" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div *ngFor="let photo of data.vehiclePhotoLinks; let j = index" [ngClass]="photo === data.vehiclePhotoLinks[0] ? 'carousel-item active' : 'carousel-item'">
+                        <img class="d-block w-100" *ngIf="data.vehiclePhotoLinks[0]" src="{{data.vehiclePhotoLinks[j]}}" alt="dk-automobile">
+                        <img class="d-block w-100" *ngIf="!data.vehiclePhotoLinks[0]" src="assets/nophoto.jpeg" alt="dk-automobile">
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls{{i}}" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls{{i}}" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-6">
+        some info
+    </div>
+</div>

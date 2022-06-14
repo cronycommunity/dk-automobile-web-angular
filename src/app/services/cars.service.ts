@@ -21,4 +21,8 @@ export class CarsService {
   getCarMarks(markNumber:number): Observable<any> {
     return this.httpClient.get(`https://listing-creation.api.autoscout24.com/makes?makeId=${markNumber}&culture=de-DE`, this.httpOptions);
   }
+
+  getConstData(): Observable<any>{
+    return this.httpClient.get('http://localhost:3000/dk-auto',this.httpOptions);
+  }
 }
