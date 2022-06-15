@@ -1,0 +1,9 @@
+{
+  "projectName": "mdb5-free-angular",
+  "meta": {
+    "type": "frontend",
+    "starter": "mdb5-free-angular"
+  },
+  "packageManager": "npm",
+  "hash": "70e16924"
+}
