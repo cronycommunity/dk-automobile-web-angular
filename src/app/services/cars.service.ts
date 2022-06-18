@@ -23,7 +23,6 @@ export class CarsService {
   }
 
   getConstData(): Observable<any>{
-    // return this.httpClient.get('http://localhost:3000/dk-auto',this.httpOptions);
     return this.httpClient.get('http://cronyapps.de:49168/dk-auto',this.httpOptions);
   }
 }
