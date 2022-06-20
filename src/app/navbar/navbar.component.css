@@ -1,0 +1,23 @@
+.navbar-brand {
+    font-size: xx-large;
+    /* margin-right: 100px;
+    margin-bottom: 50px; */
+}
+
+
+.nav-link:hover {
+    border-bottom: solid 2px #232121;
+  }
+  
+  .nav-link.active {
+    border-bottom: solid 2px #f5a608;
+  }
+  
+  .nav-link.active.notactive {
+    border-bottom: none;
+  }
+  
+  /* .nav-link:hover{
+    backround-color: rgb(177, 145, 145);
+  }
+   */
