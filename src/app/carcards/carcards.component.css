@@ -26,3 +26,11 @@
     --bs-text-opacity: 1;
     color: #6c757d !important;
 }
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
