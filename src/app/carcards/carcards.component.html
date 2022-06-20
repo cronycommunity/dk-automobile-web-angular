@@ -1,53 +1,62 @@
-<div class="car-card" *ngFor="let data of constData;let i = index;">
-    <div class="row shadow-sm p-3 mb-5 bg-white rounded" id="{{data.vehicleName}}" (mouseleave)="lightShadow(data.vehicleName)" (mouseover)="hardShadow(data.vehicleName)">
-        <div class="col-sm-6">
-            <div class="car-photo-card">
-                <div id="carouselExampleControls{{i}}" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div *ngFor="let photo of data.vehiclePhotoLinks; let j = index" [ngClass]="photo === data.vehiclePhotoLinks[0] ? 'carousel-item active' : 'carousel-item'">
-                            <img class="d-block w-100  rounded-sm" *ngIf="data.vehiclePhotoLinks[0]" src="{{data.vehiclePhotoLinks[j]}}" alt="dk-automobile">
-                            <img class="d-block w-100" *ngIf="!data.vehiclePhotoLinks[0]" src="assets/nophoto.jpeg" alt="dk-automobile">
+<div class="container">
+    <div class="row my-2">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Unsere Gebrauchtwagen</h2>
+            <h3 class="section-subheading text-muted">
+                Wir freuen uns auf Ihren Besuch in Singen !</h3>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-lg-4 col-sm-6 p-2 rounded" *ngFor="let data of constData;let i = index;" id="{{data.vehicleName}}" (mouseleave)="lightShadow(data.vehicleName)" (mouseover)="hardShadow(data.vehicleName)">
+            <div class="row">
+                <!-- <div class="col"> -->
+                <div class="car-photo-card">
+                    <div id="carouselExampleControls{{i}}" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div *ngFor="let photo of data.vehiclePhotoLinks; let j = index" [ngClass]="photo === data.vehiclePhotoLinks[0] ? 'carousel-item active' : 'carousel-item'">
+                                <img class="d-block w-100  rounded-sm" *ngIf="data.vehiclePhotoLinks[0]" src="{{data.vehiclePhotoLinks[j]}}" alt="dk-automobile">
+                                <img class="d-block w-100" *ngIf="!data.vehiclePhotoLinks[0]" src="assets/nophoto.jpeg" alt="dk-automobile">
 
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls{{i}}" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls{{i}}" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls{{i}}" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls{{i}}" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
+                <div class="car-info-card">
+                    <div class="row">
+                        <div class="col">
+                            <h6>{{data.vehicleName}}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">{{data.vehiclePrice}}</div>
+                        <div class="col-sm-5">{{data.vehicleMileage}}</div>
+                        <div class="col-sm-3">{{data.vehicleFirstRegistrationDate}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">{{data.vehicleHorsePower}}</div>
+                        <div class="col-sm-5">{{data.vehicleOfferType}}</div>
+                        <div class="col-sm-3">{{data.vehicleCO2Emission}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">{{data.vehicleTransmissionType}}</div>
+                        <div class="col-sm-6">{{data.vehicleFuel}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">{{data.vehiclePreviousOwner}}</div>
+                        <div class="col-sm-6">{{data.vehicleCombinesConsuption}}</div>
+                    </div>
+                </div>
+                <!-- </div> -->
             </div>
+        </div>
 
-        </div>
-        <div class="col-sm-6">
-            <div class="car-info-card">
-                <div class="row">
-                    <div class="col">
-                        <h6>{{data.vehicleName}}</h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">{{data.vehiclePrice}}</div>
-                    <div class="col-sm-5">{{data.vehicleMileage}}</div>
-                    <div class="col-sm-3">{{data.vehicleFirstRegistrationDate}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">{{data.vehicleHorsePower}}</div>
-                    <div class="col-sm-5">{{data.vehicleOfferType}}</div>
-                    <div class="col-sm-3">{{data.vehicleCO2Emission}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">{{data.vehicleTransmissionType}}</div>
-                    <div class="col-sm-6">{{data.vehicleFuel}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">{{data.vehiclePreviousOwner}}</div>
-                    <div class="col-sm-6">{{data.vehicleCombinesConsuption}}</div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
