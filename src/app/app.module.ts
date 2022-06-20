@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { CarmodelsComponent } from './carmodels/carmodels.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarcardsComponent } from './carcards/carcards.component';
 
@@ -14,7 +13,6 @@ import { CarcardsComponent } from './carcards/carcards.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    CarmodelsComponent,
     CarcardsComponent
   ],
   imports: [

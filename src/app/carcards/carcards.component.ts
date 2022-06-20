@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CarsService } from '../services/cars.service';
 
 @Component({
@@ -13,22 +12,17 @@ import { CarsService } from '../services/cars.service';
 export class CarcardsComponent implements OnInit {
 
   constructor(
-    private carservice: CarsService, @Inject(DOCUMENT) document: Document
+    private carservice: CarsService
     ) { }
 
   constData:any;
-  status = true;
 
   ngOnInit(): void {
-    this.getConstCarPhotos();
+    this.getConstData();
   }
 
-  getConstCarPhotos(){
-    this.carservice.getConstData().subscribe(data =>{
-      this.constData = data;
-      console.log(this.constData)
-
-    })
+  getConstData(){
+    this.constData = this.carservice.getConstData();
   }
 
   // gives shadow when mouseover
@@ -42,7 +36,7 @@ export class CarcardsComponent implements OnInit {
   lightShadow(id:any){
    let autocard = document.getElementById(id);
    autocard?.classList.remove("shadow", "p-3", "mb-2", "bg-white", "rounded");
-   autocard?.classList.add("shadow-sm", "p-3", "mb-2", "bg-white", "rounded");
+   autocard?.classList.add("p-3", "mb-2", "bg-white", "rounded");
 
   }
 }
