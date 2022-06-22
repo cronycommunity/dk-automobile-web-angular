@@ -7,10 +7,8 @@ import { CarsService } from '../services/cars.service';
   styleUrls: ['./carcards.component.css']
 })  
 
-
-
 export class CarcardsComponent implements OnInit {
-
+  
   constructor(
     private carservice: CarsService
     ) { }
@@ -22,7 +20,9 @@ export class CarcardsComponent implements OnInit {
   }
 
   getConstData(){
-    this.constData = this.carservice.getConstData();
+    this.carservice.getConstData().subscribe(data =>{
+      this.constData = data;
+    })
   }
 
   // gives shadow when mouseover
