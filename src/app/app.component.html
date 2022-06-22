@@ -1,5 +1,22 @@
-<app-navbar></app-navbar>
-
-<app-carcards></app-carcards>
-
-<app-footer></app-footer>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-navbar></app-navbar>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <div style="position:fixed;">
+                <app-left-column></app-left-column>
+            </div>
+        </div>
+        <div class="col-10">
+            <app-carcards></app-carcards>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
