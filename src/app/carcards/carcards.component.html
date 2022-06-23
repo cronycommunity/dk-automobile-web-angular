@@ -1,10 +1,13 @@
-<div class="jumbotron container mt-2">
-    <div class="container text-center">
-        <h2 class="section-heading text-uppercase">Unsere Gebrauchtwagen</h2>
-        <h3 class="section-subheading text-muted">
-            Wir freuen uns auf Ihren Besuch in Singen !</h3>
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Unsere Gebrauchtwagen</h2>
+            <h3 class="section-subheading text-muted">
+                Wir freuen uns auf Ihren Besuch in Singen !
+            </h3>
+        </div>
     </div>
-</div>
+</section>
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-sm-6 p-2 rounded" *ngFor="let data of constData;let i = index;" id="{{data.vehicleName}}" (mouseleave)="lightShadow(data.vehicleName)" (mouseover)="hardShadow(data.vehicleName)">
